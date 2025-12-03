@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="TypingSpeed.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+
+        <div id="start-screen" class="screen active">
+            <div class="intro-section">
+                <p>Test your typing speed and accuracy!</p>
+                <p class="description">You will have 60 seconds to type as many words as you can accurately.</p>
+            </div>
+            <button id="start-btn" class="btn btn-primary">Start Test</button>
+        </div>
+
+        <div id="test-screen" class="screen">
+            <div class="test-header">
+                <div class="timer">
+                    <span class="timer-label">Time Left:</span>
+                    <span id="timer" class="timer-value">60</span>s
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">WPM:</span>
+                        <span id="wpm" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Errors:</span>
+                        <span id="errors" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Accuracy:</span>
+                        <span id="accuracy" class="stat-value">100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paragraph-section">
+                <p id="paragraph" class="paragraph"></p>
+            </div>
+
+            <textarea 
+                id="user-input" 
+                class="input-box" 
+                placeholder="Start typing here..."
+                disabled
+            ></textarea>
+
+            <button id="submit-btn" class="btn btn-primary">Submit Test</button>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h2>Test Complete!</h2>
+            
+            <div class="result-box">
+                <div class="result-item big">
+                    <div class="result-label">Words Per Minute</div>
+                    <div class="result-value" id="final-wpm">0</div>
+                </div>
+            </div>
+
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="result-label">Total Words Typed</div>
+                    <div class="result-value" id="total-words">0</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Accuracy</div>
+                    <div class="result-value" id="final-accuracy">0%</div>
+                </div>
+            </div>
+
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="result-label">Correct Characters</div>
+                    <div class="result-value" id="correct-chars">0</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Total Errors</div>
+                    <div class="result-value" id="total-errors">0</div>
+                </div>
+            </div>
+
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="result-label">Time Spent</div>
+                    <div class="result-value" id="time-spent">60s</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Correct Words</div>
+                    <div class="result-value" id="correct-words">0</div>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="btn btn-primary">Try Again</button>
+        </div>
+    </div>
+
+    <script src="TypingSpeed.js"></script>
+</body>
+</html>
